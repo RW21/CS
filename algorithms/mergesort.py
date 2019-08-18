@@ -11,7 +11,8 @@ def mergesort(target: list):
 
     return merge(left, right)
 
-def merge(left,right):
+
+def merge(left, right):
     merged = []
 
     l = r = 0
@@ -31,6 +32,5 @@ def merge(left,right):
         merged.extend(right[r:])
 
     return merged
-
 
 
