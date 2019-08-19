@@ -1,36 +1,48 @@
+from data_structures.linked_list import Node
+
+
 class Stack:
     def __init__(self):
-        self.list_: list = []
-        self.max: int = 0
-        
+        # self.first: Node
+        self.last: Node
+        self.number_of_nodes = 0
+
+    def __len__(self):
+        return self.number_of_nodes
+
     def pop(self):
-        if self.max == 0:
-            raise EmptyException
-        tmp = self.list_.pop(self.max - 1)
-        self.max -= 1
-        return tmp
+        if self.number_of_nodes == 0:
+            raise StackEmptyException
+        val = self.last.val
+        self.last = self.last.next
+        self.number_of_nodes -= 1
+
+        return val
 
     def push(self, item):
-        self.list_.append(item)
-        self.max += 1
+        if self.number_of_nodes == 0:
+            self.last = Node(item)
+        else:
+            n = Node(item)
+            n.next = self.last
+            self.last = n
+
+        self.number_of_nodes += 1
 
     def peek(self):
-        return self.list_[self.max] 
+        return self.last.val
 
-    def isEmpty(self):
-        if max == 0:
-            return True
-        return False
 
-class EmptyException(Exception):
+class StackEmptyException(Exception):
     """
-    Stack is empty.
+    Stack is empty. Cannot pop anymore.
     """
+
 
 # example
 s = Stack()
 s.push('a')
 s.push('b')
 print(s.pop())
+print(len(s))
 print(s.pop())
-print(s.isEmpty())
