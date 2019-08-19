@@ -1,9 +1,12 @@
+from __future__ import annotations
+
+
 class Node:
     def __init__(self, val):
         self.val = val
         self.next = None
     
-    def link(node: Node):
+    def link(self, node: Node):
         self.next = node
 
 # example 
