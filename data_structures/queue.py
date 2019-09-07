@@ -32,10 +32,3 @@ class Queue:
         return self.last.val
 
 
-# example
-q = Queue()
-q.add('b')
-q.add('c')
-print(q.remove())
-print(len(q))
-print(q.remove())

@@ -38,11 +38,3 @@ class StackEmptyException(Exception):
     Stack is empty. Cannot pop anymore.
     """
 
-
-# example
-s = Stack()
-s.push('a')
-s.push('b')
-print(s.pop())
-print(len(s))
-print(s.pop())
