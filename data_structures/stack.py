@@ -3,7 +3,6 @@ from data_structures.linked_list import Node
 
 class Stack:
     def __init__(self):
-        # self.first: Node
         self.last: Node
         self.number_of_nodes = 0
 
