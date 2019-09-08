@@ -19,11 +19,11 @@ class Node:
 
     def __str__(self):
         temp = self
-        s = ["head: ", temp.val]
+        s = ["head: ", str(temp.val)]
         while temp.next is not None:
             temp = temp.next
             s.append(" -> ")
-            s.append(temp.val)
+            s.append(str(temp.val))
 
         return "".join(s)
 

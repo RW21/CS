@@ -10,6 +10,9 @@ class Stack:
     def __len__(self):
         return self.number_of_nodes
 
+    def __str__(self):
+        return str(self.last)
+
     def pop(self):
         if self.number_of_nodes == 0:
             raise StackEmptyException
@@ -37,4 +40,3 @@ class StackEmptyException(Exception):
     """
     Stack is empty. Cannot pop anymore.
     """
-
