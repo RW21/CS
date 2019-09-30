@@ -25,18 +25,19 @@ class Queue:
     def remove(self):
         if self.first is None:
             raise QueueEmptyException
-        else:
-            val = self.first.val
-            self.first = self.first.next
-            if self.first is None:
-                self.last = None
-            self.number_of_nodes -= 1
+
+        val = self.first.val
+        self.first = self.first.next
+
+        if self.first is None:
+            self.last = None
+        self.number_of_nodes -= 1
 
         return val
 
     def peek(self):
-        return self.last.val
+        return self.first.val
 
 
-class QueueEmptyException:
+class QueueEmptyException(Exception):
     """Queue is empty."""
