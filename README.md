@@ -1,2 +1,3 @@
 # CS_python
-Computer science fundamentals with python
+
+Data structures and algorithms in Python.
