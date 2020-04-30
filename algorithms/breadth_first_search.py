@@ -8,10 +8,10 @@ d = graph.GraphNode(4)
 e = graph.GraphNode(5)
 f = graph.GraphNode(6)
 
-a.add_node_from_list([b, e, f])
-b.add_node_from_list([d, e])
+a.add_nodes_from_list([b, e, f])
+b.add_nodes_from_list([d, e])
 c.add_node(b)
-d.add_node_from_list([c, e])
+d.add_nodes_from_list([c, e])
 
 def bfs(root: graph.GraphNode, visit):
     visited = set()

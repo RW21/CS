@@ -32,3 +32,17 @@ class TestBinary_search(TestCase):
         order = []
         post_order_traversal(root, lambda x: order.append(x.val))
         assert order == [4, 5, 2, 6, 7, 3, 1]
+
+    def test_post_order_depth(self):
+        order = {}
+
+        def pre_order_depth(node, depth):
+            if node is not None:
+                pre_order_depth(node.left, depth + 1)
+                pre_order_depth(node.right, depth + 1)
+                if depth not in order:
+                    order[depth] = []
+                order[depth].append(node.val)
+
+        pre_order_depth(root, 0)
+        print(order)

@@ -9,6 +9,6 @@ class GraphNode:
     def add_node(self, node):
         self.adjacent.append(node)
 
-    def add_node_from_list(self, nodes: list):
+    def add_nodes_from_list(self, nodes: list):
         self.adjacent.extend(nodes)
 
