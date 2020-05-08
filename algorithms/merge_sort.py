@@ -1,4 +1,4 @@
-def mergesort(target: list):
+def merge_sort(target: list):
     if len(target) <= 1:
         return target
 
@@ -6,8 +6,8 @@ def mergesort(target: list):
     left = target[:mid]
     right = target[mid:]
 
-    left = mergesort(left)
-    right = mergesort(right)
+    left = merge_sort(left)
+    right = merge_sort(right)
 
     return merge(left, right)
 

@@ -1,4 +1,4 @@
-def quicksort(target: list) -> list:
+def quick_sort(target: list) -> list:
     less = []
     equal = []
     greater = []
@@ -13,6 +13,6 @@ def quicksort(target: list) -> list:
             if i > target[pivot]:
                 greater.append(i)
         
-        return quicksort(less) + equal + quicksort(greater)
+        return quick_sort(less) + equal + quick_sort(greater)
 
     return target  

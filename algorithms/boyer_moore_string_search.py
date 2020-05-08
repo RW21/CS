@@ -1,4 +1,4 @@
-def BoyerMooreHorspool(pattern, text):
+def boyer_moore_string_search(pattern, text):
     m = len(pattern)
     n = len(text)
     if m > n:

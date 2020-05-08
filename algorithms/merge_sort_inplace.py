@@ -1,5 +1,4 @@
-def mergesort_inplace(target):
-
+def merge_sort_inplace(target):
     unit = 1
 
     while unit <= len(target):
@@ -23,6 +22,5 @@ def mergesort_inplace(target):
                     q += 1
 
         unit *= 2
-    
+
     return target
-    
