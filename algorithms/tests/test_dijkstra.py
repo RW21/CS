@@ -1,4 +1,5 @@
 from data_structures.graph import Graph, GraphNode, Edge
+from algorithms.dijkstra import dijstra
 
 nodes = [GraphNode('e'), GraphNode('f'), GraphNode('c'), GraphNode('a'), GraphNode('b'), GraphNode('d')]
 nodes = {n.val: n for n in nodes}
@@ -16,3 +17,5 @@ for edge in edges:
     graph.add_edge(edge)
 
 print(graph)
+dijstra(graph, nodes['a'], nodes['f'])
+
