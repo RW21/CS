@@ -16,6 +16,4 @@ edges = [Edge(nodes['e'], nodes['f'], 9), Edge(nodes['e'], nodes['d'], 6), Edge(
 for edge in edges:
     graph.add_edge(edge)
 
-print(graph)
-dijstra(graph, nodes['a'], nodes['f'])
-
+assert dijstra(graph, nodes['a']) == {nodes['a']: 0, nodes['f']: 11, nodes['c']: 9, nodes['b']: 7, nodes['e']: 23, nodes['d']: 20}
