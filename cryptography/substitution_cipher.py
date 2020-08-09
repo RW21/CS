@@ -1,4 +1,4 @@
-from algorithms.euclid import euclid, modinv
+from algorithms.number_theory.euclid import euclid, modinv
 import numpy as np
 from collections import defaultdict, Counter
 from itertools import combinations
