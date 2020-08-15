@@ -32,6 +32,27 @@ class Node:
 
         return str(self.val) + '(L:' + str(l) + ' R:' + str(r) + ')'
 
+    def __len__(self):
+        l_size, r_size = 0, 0
+        if self.left:
+            l_size = len(self.left)
+        if self.right:
+            r_size = len(self.right)
+
+        if self.val is not None:
+            return 1 + l_size + r_size
+        else:
+            return 0
+
+    def height(self, curr=0):
+        l_height, r_height = curr, curr
+        if self.left:
+            l_height = self.left.height(curr=curr+1)
+        if self.right:
+            r_height = self.right.height(curr=curr+1)
+
+        return max(l_height, r_height)
+
     def pretty_print(self):
         this_level = [self]
         while this_level:
@@ -45,14 +66,4 @@ class Node:
             print(" ")
             this_level = next_level
 
-    def __len__(self):
-        l_size, r_size = 0, 0
-        if self.left:
-            l_size = len(self.left)
-        if self.right:
-            r_size = len(self.right)
 
-        if self.val is not None:
-            return 1 + l_size + r_size
-        else:
-            return 0
