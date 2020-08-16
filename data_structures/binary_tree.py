@@ -44,6 +44,9 @@ class Node:
         else:
             return 0
 
+    def __contains__(self, item):
+        return self.val is not None and self.val == item or (item in self.right) or (item in self.left)
+
     def height(self, curr=0):
         l_height, r_height = curr, curr
         if self.left:
