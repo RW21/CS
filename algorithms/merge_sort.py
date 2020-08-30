@@ -34,3 +34,4 @@ def merge(left, right):
     return merged
 
 
+merge_sort([1,4,2,0,3])

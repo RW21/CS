@@ -10,3 +10,4 @@
                       [(< x y) (cons x ls)]
                       [else (cons y (insert x rst))])]))
   (foldl insert '() l))
+
