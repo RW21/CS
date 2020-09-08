@@ -15,6 +15,9 @@ class GraphNode:
     def add_nodes_from_list(self, nodes: list):
         self.adjacent.extend(nodes)
 
+    def out_degrees(self):
+        return sum(self.adjacent)
+
 
 class Edge:
     def __init__(self, x: GraphNode, y: GraphNode, distance: int):
@@ -50,3 +53,4 @@ class Graph:
         except KeyError as e:
             print(str(edge.y) + 'not registered in graph')
             print(e)
+
